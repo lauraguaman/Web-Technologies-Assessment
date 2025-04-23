@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Climate+Crisis&family=Emblema+One&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Limelight&family=Modak&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shrikhand&family=Yusei+Magic&display=swap');
+/*
+font-family: "Big Shoulders", sans-serif;
+font-family: "IBM Plex Sans", sans-serif;
+font-family: "Shrikhand", serif;
+font-family: "Modak", system-ui;
+font-family: "Yusei Magic", sans-serif;
+font-family: "Climate Crisis", sans-serif;
+font-family: "Monoton", sans-serif;
+font-family: "Limelight", sans-serif;
+font-family: "Montserrat", sans-serif;
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background-color: #98c053;
+}
+
+.navbar .nav-logo .logo-text {
+    color: #2a0eb8;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Nav menu */
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: #201a0e;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: #d1d0d0;
+    background: rgba(223, 219, 221, 0.4);
+}
+
+/* Submenu (carrito) */
+.navbar .submenu {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: #8f8e9076;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    min-width: 400px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    color: #f5efeb;
+}
+
+.borrar {
+    background-color: #0f0e0e;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #f5efef;
+    font-weight: 800;
+    cursor: pointer;
+}
