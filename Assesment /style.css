@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Climate+Crisis&family=Emblema+One&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Limelight&family=Modak&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shrikhand&family=Yusei+Magic&display=swap');
+/*Importing Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Boldonse&family=Climate+Crisis&family=Emblema+One&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Limelight&family=Miniver&family=Modak&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&family=Yusei+Magic&display=swap');
 /*
 font-family: "Big Shoulders", sans-serif;
 font-family: "IBM Plex Sans", sans-serif;
@@ -9,97 +10,292 @@ font-family: "Climate Crisis", sans-serif;
 font-family: "Monoton", sans-serif;
 font-family: "Limelight", sans-serif;
 font-family: "Montserrat", sans-serif;
+font-family: "Boldonse", system-ui;
+font-family: "Miniver", cursive;
+font-family: "Poppins", sans-serif;
 */
-* {
-    margin: 0;
+*{
+    margin:0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
-/* Header */
-header {
-    position: fixed;
+/*header*/ 
+header{
+    position:fixed;
     width: 100%;
     z-index: 5;
-    background-color: #98c053;
-}
+    background-color:  #e9da52;
 
-.navbar .nav-logo .logo-text {
+}
+.navbar .nav-logo .logo-text{
     color: #2a0eb8;
     font-size: x-large;
     font-weight: 900;
 }
-
-header .navbar {
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Nav menu */
-.navbar .nav-menu {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar .nav-menu .nav-link {
+.navbar .nav-menu .nav-link{
     padding: 10px 18px;
     color: #201a0e;
     border-radius: 50px;
     transition: 0.3s ease;
 }
-
-.navbar .nav-menu .nav-link:hover {
+.navbar .nav-menu .nav-link:hover{
     color: #d1d0d0;
     background: rgba(223, 219, 221, 0.4);
 }
+header .navbar{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .nav-menu{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #e9da52;
+}
 
-/* Submenu (carrito) */
+/*SUBMENU*/ 
+
 .navbar .submenu {
     margin-left: 20px;
     display: flex;
     align-items: center;
 }
 
-.submenu {
+.submenu{
     position: relative;
 }
-
-.submenu #carrito {
-    display: none;
+.submenu #carrito{
+     display: none;
 }
-
-.submenu:hover #carrito {
-    display: block;
+.submenu:hover #carrito{
+    display:block;
     position: absolute;
     right: 0;
+    backdrop-filter: blur(10px);
     top: 100%;
     z-index: 1;
     background-color: #8f8e9076;
-    backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 20PX;
     min-width: 400px;
 }
 
-table {
+table{
     width: 100%;
 }
 
-th, td {
+th,td{
     color: #f5efeb;
 }
 
-.borrar {
+.borrar{
     background-color: #0f0e0e;
     border-radius: 50%;
     padding: 5px 10px;
     text-decoration: none;
-    color: #f5efef;
+    color:#f3eded;
     font-weight: 800;
     cursor: pointer;
 }
+/*MAINDESIGN*/ 
+/* Imagen de portada */
+.hero-section {
+    position: relative;
+    margin-top: 80px; /* Ajusta según la altura del header */
+}
+
+.hero-image {
+    width: 100vw;
+    height: auto;
+    display: block;
+    background-color: #e9da52;
+}
+
+
+/* Sección creativa destacada */
+.solent-highlight {
+    background-color: #e9da52; /* Fondo que puedes cambiar */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.highlight-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.highlight-box h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Colores y fuentes personalizadas por palabra */
+.solent {
+    color: #2a0eb8;
+    font-family: 'Poppins', sans-serif;
+}
+
+.art {
+    color: #fa9c0f;
+    font-family: 'Poppins', sans-serif;
+}
+
+.university {
+    color: #3214c6;
+    font-family:'Poppins', sans-serif;
+}
+
+/* Sección informativa */
+.info-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f3ec9e;;
+}
+
+.info-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2513ec;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #1703c8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-text h1,
+    .highlight-box h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text {
+        padding: 15px 25px;
+    }
+}
+
+  /* reasons section   */
+  .reason-section {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .reason-box {
+    background-color: #5fbdf3;
+    border-left: 8px solid #cbd600; /* Rojo similar al de 'Solent' */
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reason-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1e1e1e;
+  }
+  
+  .reason-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+
+  /* FOOTER   */
+  .footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 2.5rem 1rem 1.5rem;
+    font-family: sans-serif;
+  }
+  
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  .footer-column {
+    flex: 1 1 250px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.1rem;
+    color: #d6001c;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 0.8rem;
+  }
+  
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+  }
+  
+  .social-icons a img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+  
+
+/* Colores y fuentes personalizadas por palabra */
+/* Colores y fuentes personalizadas por palabra */
+/* Colores y fuentes personalizadas por palabra */
+
+
+  
