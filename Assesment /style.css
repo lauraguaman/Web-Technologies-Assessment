@@ -25,7 +25,7 @@ header{
     position:fixed;
     width: 100%;
     z-index: 5;
-    background-color:  #e9da52;
+    background-color:  #a5a5a5;
 
 }
 .navbar .nav-logo .logo-text{
@@ -40,7 +40,7 @@ header{
     transition: 0.3s ease;
 }
 .navbar .nav-menu .nav-link:hover{
-    color: #d1d0d0;
+    color: #757575;
     background: rgba(223, 219, 221, 0.4);
 }
 header .navbar{
@@ -55,7 +55,7 @@ header .navbar{
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #e9da52;
+    
 }
 
 /*SUBMENU*/ 
@@ -112,13 +112,13 @@ th,td{
     width: 100vw;
     height: auto;
     display: block;
-    background-color: #e9da52;
+    background-color: #f5efbb;
 }
 
 
 /* Sección creativa destacada */
 .solent-highlight {
-    background-color: #e9da52; /* Fondo que puedes cambiar */
+    background-color: #e2acf1; /* Fondo que puedes cambiar */
     padding: 40px 20px;
     text-align: center;
 }
@@ -142,7 +142,7 @@ th,td{
 }
 
 .art {
-    color: #fa9c0f;
+    color: #0fd3fa;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -155,7 +155,7 @@ th,td{
 .info-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #f3ec9e;;
+    background-color: #cbabd3;;
 }
 
 .info-container {
@@ -166,7 +166,7 @@ th,td{
 .info-section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #2513ec;
+    color: #0f038f;
 }
 
 .info-section p {
@@ -197,8 +197,8 @@ th,td{
   }
   
   .reason-box {
-    background-color: #5fbdf3;
-    border-left: 8px solid #cbd600; /* Rojo similar al de 'Solent' */
+    background-color: #9ad2f3;
+    border-left: 8px solid #8637bf; /* Rojo similar al de 'Solent' */
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -241,7 +241,7 @@ th,td{
   
   .footer-column h3 {
     font-size: 1.1rem;
-    color: #d6001c;
+    color: #eaf6fa;
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
@@ -297,5 +297,810 @@ th,td{
 /* Colores y fuentes personalizadas por palabra */
 /* Colores y fuentes personalizadas por palabra */
 
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
+/* Header */
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color:  #311980;
+    padding: 10px 0;
+    z-index: 5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
+/* Título de la página (Courses) */
+.courses-title {
+    margin-top: 80px; /* To prevent overlap with the navbar */
+    text-align: center;
+    padding: 40px 0;
+    background-color: #311980
+}
+
+.courses-title h1 {
+    font-size: 8rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f9f9f9;
+}
+
+/* image (Courses) */
+
+.courses-image {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .courses-image img {
+    width: 100vw; /* 100% del ancho de la ventana */
+    height: auto;
+    display: block; /* quita espacio extra abajo */
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+/* Descripción de los cursos */
+.courses-description {
+    padding: 20px;
+    text-align: center;
+    background-color: #311980;
+}
+
+.courses-description p {
+    font-size: 1.2rem;
+    color: #fbfbfb;
+    line-height: 1.6;
+}
+
+/* Barra de búsqueda de cursos */
+.search-courses {
+    padding: 20px;
+    text-align: center;
+    background-color: #9d91f9;
+}
+
+.search-courses-bar {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 2px solid #241b6e;
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+/*courses*/
+.courses{
+    padding :50px;
+    text-align: center;
+    background-color: #d8cbf7;
+    
+}
+
+.courses h2{
+    color: rgb(15, 2, 2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.courses-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px
+   
+  
+}
+.courses{
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+}
+.courses img{
+    width: 200px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.courses h3{
+    font-size: 20px;
+    color: #111111;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.courses p, .value{
+    font-size: 16px;
+    color: rgba(40, 7, 102, 0.812);
+    margin-bottom: 15px;
+} 
+
+.value{
+    font-weight: 800;
+}
+/*half text half image */
+.half-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh; /* ocupa toda la pantalla */
+  }
+  
+  .half-image, .half-text {
+    flex: 1 1 50%;
+    height: 100%;
+  }
+  
+  .half-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .half-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #370977;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .half-text h2 {
+    font-size: 2rem;
+    color: #cfd0d1;
+  }
+  
+/*icons */
+
+.icons{
+    padding: 50px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-1{
+    flex-basis: calc(33.3% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+
+background-color: #b0b5f9;
+}
+
+.icon-txt h3{
+    font-size: 20px;
+    color: #5a13de;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.icon-txt p {
+    font-size: 16px;
+    color:#010105;
+}
+
+
+/*page 4 undergrate *//*icons *//*icons *//*icons *//*icons *//*icons *//*icons *//*icons *//*icons *//*icons */
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color:  #f6cb20;
+    padding: 10px 0;
+    z-index: 5;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar2 .logo2 img {
+    height: 50px;
+}
+
+.submenu2 {
+    position: relative;
+}
+
+.submenu-btn2 {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.submenu-content2 {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(251, 249, 249, 0.1);
+}
+
+.submenu2:hover .submenu-content2 {
+    display: block;
+}
+
+
+/* half imahe half text 2 */
+.half-section2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh; /* ocupa toda la pantalla */
+  }
+  
+  .half-image2, .half-text2 {
+    flex: 1 1 50%;
+    height: 100%;
+  }
+  
+  .half-image2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .half-text2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eff4dc;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .half-text2 h2 {
+    font-size: 2rem;
+    color: #48058f;
+  }
+  
+/* title page and search option  */
+/* Estilos para el título de la página */
+.courses-title3 {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.courses-title3 h1 {
+    font-size: 36px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-courses3 {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.search-courses-bar {
+    width: 50%;
+    max-width: 500px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.search-courses-bar:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+  /* Estilo para contenedor general de cursos */
+/* --- Estilos Generales --- */
+.underground-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .underground-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .course-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .course-image-container {
+    width: 40%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .course-text {
+    width: 60%;
+    padding-left: 20px;
+  }
+  
+  .underground-title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .underground-text {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .underground-box {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .course-image-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .course-text {
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .underground-title {
+      font-size: 1.4rem;
+    }
+  
+    .underground-text {
+      font-size: 1rem;
+    }
+  }
+/* --- Responsive --- */
+     
+/* --- paginahtml 5 --- */
+
+/* --- Responsive --- */
+     
+/* --- paginahtml 5 --- *//* --- Responsive --- */
+     
+/* --- paginahtml 5 --- */
+
+/* Header */
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color:  #e6bfe5;
+    padding: 10px 0;
+    z-index: 5;
+}
+
+.navbar3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar3 .logo3 img {
+    height: 50px;
+}
+
+.submenu3 {
+    position: relative;
+}
+
+.submenu-btn3 {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.submenu-content3 {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(251, 249, 249, 0.1);
+}
+
+.submenu3:hover .submenu-content3 {
+    display: block;
+}
+
+/* postgraduate section*/
+.postgraduate-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .postgraduate-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f8e4f7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .course-content2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .course-image-container2 {
+    width: 40%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .course-text2 {
+    width: 60%;
+    padding-left: 20px;
+  }
+  
+  .postgraduate-title {
+    font-size: 1.5rem;
+    color: #04226d;
+  }
+  
+  .postgraduate-text {
+    font-size: 1rem;
+    color: #050000;
+    margin-top: 10px;
+  }
+  
+  /* half imahe half text 2 */
+.half-section3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh; /* ocupa toda la pantalla */
+  }
+  
+  .half-image3, .half-text3 {
+    flex: 1 1 50%;
+    height: 100%;
+  }
+  
+  .half-image3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .half-text3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #be66dbcc;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .half-text3 h2 {
+    font-size: 2rem;
+    color: #0c0c0b;
+  }
+
+/* Estilos para la barra de búsqueda */
+.search-courses3 {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.search-courses3-bar {
+    width: 50%;
+    max-width: 500px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #bbbbbb;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.search-courses3-bar:focus {
+    border-color: #355f8b;
+    outline: none;
+}
+
+/* Estilos para el título Postgraduate */
+.courses-title3 {
+    text-align: center;
+    background-color: #f5c5f5; /* color de fondo suave */
+    padding: 40px 20px;
+}
+
+.courses-title3 h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5.5rem;
+    color: #1f0134; /* color de texto morado oscuro */
+}
+
+/* Estilos para el título Study With Us */
+.titlecoursedescription-title {
+    text-align: center;
+    background-color: #e6a9f5; /* color de fondo diferente */
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.titlecoursedescription-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #0b0211; /* color púrpura */
+}
+
+/* Descripción de los cursos */
+.courses-description3 {
+    padding: 20px;
+    text-align: center;
+    background-color: #cc96e1;
+}
+
+.courses-description3 p {
+    font-size: 1.2rem;
+    color: #140101;
+    line-height: 1.6;
+}
+
+
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .postgraduate-box {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .course-image-container2 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .course-text2 {
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .postgraduate-title {
+      font-size: 1.4rem;
+    }
+  
+    .postgraduate-text {
+      font-size: 1rem;
+    }
+  }
+          
+    /* --- pagina 6--- */  /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- */
+      /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- */
+    
+/* Estilos Generales */
+/* Estilos Generales */
+
+/* Estilos para la página de Staff */
+.staff-hero {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+  
+  .staff-section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .staff-message {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+  }
+  
+  .staff-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  
+  .staff-card {
+    width: 300px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .staff-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .staff-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .staff-card h3 {
+    margin: 20px 0 10px 0;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .staff-card p {
+    font-size: 1rem;
+    padding: 0 15px 20px 15px;
+    color: #777;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Navbar específico para esta página */
+  .staff-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .staff-navbar img {
+    width: 120px;
+  }
+  
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .menu-list a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s;
+  }
+  
+  .menu-list a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Responsive ajustes */
+  @media (max-width: 768px) {
+    .staff-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   
