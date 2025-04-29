@@ -981,11 +981,159 @@ header {
           
     /* --- pagina 6--- */  /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- */
       /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- */
-    
-/* Estilos Generales */
-/* Estilos Generales */
-/* styles.css */
+  /* General Styles */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c3c3bb;
+}
 
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #eaeae7;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar .menu-toggle img {
+  height: 30px;
+}
+
+.navbar .menu-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar .menu-list li {
+  margin: 0 15px;
+}
+
+.navbar .menu-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar .menu-list li a:hover {
+  text-decoration: underline;
+}
+
+/* Sección 1: Imagen a la izquierda, frase a la derecha */
+.image-quote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Asegura que ocupe toda la altura de la página */
+}
+
+.image-container {
+  width: 50%;
+  height: 100%; /* Imagen toma el 50% de la altura total */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+}
+
+.quote-container {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+/* Sección 2: Título "Our Staff" */
+.our-staff-title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.our-staff-title h1 {
+  font-size: 60px;
+  color: #030303;
+  background-color: #bbc2c8;
+}
+
+/* Sección 3: Descripción de "Our Staff" */
+.our-staff-description {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #0a0101;
+  line-height: 1.6;
+  background-color: #717579;
+}
+
+/* Sección 4: Lista de los 8 profesores */
+.staff-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.staff-member {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+.staff-member img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.bio {
+  padding: 10px 0;
+}
+
+.bio h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.bio p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .staff-members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-quote {
+    flex-direction: column;
+  }
+}
+
+
+/* information page  */  /* information page  */  /* information page  */  /* information page  */  /* information page  */
+    /* information page  */  /* information page  */  /* information page  */  /* information page  */  /* information page  */
 /* Reset básico */
 * {
   margin: 0;
@@ -993,10 +1141,63 @@ header {
   box-sizing: border-box;
 }
 
-/* Estilo general del body */
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #5f2626;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.home-icon img {
+  height: 30px;
+  cursor: pointer;
+}
+
+/* SECTION: Menú + Imagen */
+.menu-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+.menu-box {
+  width: 40%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.menu-box ul {
+  list-style: none;
+}
+
+.menu-box ul li {
+  margin-bottom: 15px;
+}
+
+.menu-box ul li a {
+  text-decoration: none;
   color: #333;
+  font-size: 18px;
+}
+
+.menu-image {
+  width: 55%;
+}
+
+.menu-image img {
+  width: 100%;
+  border-radius: 8px;
 }

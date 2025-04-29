@@ -13,4 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+//page 7 information//
+
+function goHome() {
+  // Cambia la URL si tu main page se llama diferente
+  window.location.href = "index.html";
+}
+
+
+
+
+
   
+
