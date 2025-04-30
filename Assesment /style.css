@@ -291,190 +291,217 @@ body {
   }
 }
 
-/* pagina 2 courses *//* pagina 2 courses *//* pagina 2 courses *//* pagina 2 courses */
-/* pagina 2 courses *//* pagina 2 courses *//* pagina 2 courses *//* pagina 2 courses */
+/* courses page ,courses page, courses page , courses page*//* courses page ,courses page, courses page , courses page*//* courses page ,courses page, courses page , courses page*/
+/* courses page ,courses page, courses page , courses page*//* courses page ,courses page, courses page , courses page*//* courses page ,courses page, courses page , courses page*/
 
-/* Resetting some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
 /* Título de la página (Courses) */
 .courses-title {
-    margin-top: 80px; /* To prevent overlap with the navbar */
-    text-align: center;
-    padding: 40px 0;
-    background-color: #0f0e15
+  padding-top: 80px; /* To prevent overlap with the navbar */
+  text-align: center;
+  padding: 40px 0;
+  background-color: #0f0e15;
 }
 
 .courses-title h1 {
-    font-size: 8rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #f9f9f9;
+  font-size: 8rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f9f9f9;
 }
 
-/* image (Courses) */
-
+/* Imagen (Courses) */
 .courses-image {
-    padding: 0;
-    margin: 0;
-  }
+  padding: 0;
+  margin: 0;
   
-  .courses-image img {
-    width: 100vw; /* 100% del ancho de la ventana */
-    height: auto;
-    display: block; /* quita espacio extra abajo */
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  
+}
+
+.courses-image img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 /* Descripción de los cursos */
 .courses-description {
-    padding: 20px;
-    text-align: center;
-    background-color: #4e4e50;
+  padding: 20px;
+  text-align: center;
+  background-color: #4e4e50;
 }
 
 .courses-description p {
-    font-size: 1.2rem;
-    color: #fbfbfb;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  color: #fbfbfb;
+  line-height: 1.6;
 }
 
 /* Barra de búsqueda de cursos */
 .search-courses {
-    padding: 20px;
-    text-align: center;
-    background-color: #161617;
+  padding: 20px;
+  text-align: center;
+  background-color: #161617;
 }
 
 .search-courses-bar {
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 20px;
-    border: 2px solid #16161a;
-    width: 300px;
-    margin: 0 auto;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 2px solid #16161a;
+  width: 300px;
+  margin: 0 auto;
 }
 
-
-/*courses*/
-.courses{
-    padding :50px;
-    text-align: center;
-    background-color: #ffffff;
-    
+/* NUEVO DISEÑO: Undergraduate y Postgraduate */
+.courses-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #ffffff;
 }
 
-.courses h2{
-    color: rgb(15, 2, 2);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 60px;
-    text-transform: uppercase;
-    margin-bottom: 50px;
+.courses-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.courses-content{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px
-   
-  
-}
-.courses{
-    text-align: center;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
-}
-.courses img{
-    width: 200px;
-    height: 300px;
-    margin-bottom: 10px;
+.courses-row img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
-.courses h3{
-    font-size: 20px;
-    color: #111111;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+.courses-txt {
+  flex: 1;
+  min-width: 250px;
 }
 
-.courses p, .value{
-    font-size: 16px;
-    color: rgba(40, 7, 102, 0.812);
-    margin-bottom: 15px;
-} 
-
-.value{
-    font-weight: 800;
+.courses-txt h3 {
+  font-size: 28px;
+  color: #111111;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
-/*half text half image */
+
+.courses-txt p {
+  font-size: 16px;
+  color: rgba(12, 12, 13, 0.812);
+  margin-bottom: 15px;
+}
+
+.btn-2 {
+  display: inline-block;
+  background-color: #212121;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-2:hover {
+  background-color: #beb7b8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .courses-row {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .courses-row img {
+      margin: 0 0 20px 0;
+  }
+
+  .courses-txt {
+      padding: 0 10px;
+  }
+}
+
+/* half text half image */
 .half-section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100vh; /* ocupa toda la pantalla */
-  }
-  
-  .half-image, .half-text {
-    flex: 1 1 50%;
-    height: 100%;
-  }
-  
-  .half-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .half-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #080708;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .half-text h2 {
-    font-size: 2rem;
-    color: #f9f9f9;
-  }
-  
-/*icons */
-
-.icons{
-    padding: 50px 0 100px 0;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
 }
 
-.icon-1{
-    flex-basis: calc(33.3% - 30px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px;
-
-background-color: #fdfeff;
+.half-image, .half-text {
+  flex: 1 1 50%;
+  height: 100%;
 }
 
-.icon-txt h3{
-    font-size: 20px;
-    color: #050505;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.half-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.half-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #080708;
+  padding: 2rem;
+  text-align: center;
+}
+
+.half-text h2 {
+  font-size: 2rem;
+  color: #f9f9f9;
+}
+
+/* icons */
+.icons {
+  padding: 50px 0 100px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.icon-1 {
+  flex-basis: calc(33.3% - 30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: #fdfeff;
+  margin-bottom: 20px;
+}
+
+.icon-txt h3 {
+  font-size: 20px;
+  color: #050505;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .icon-txt p {
-    font-size: 16px;
-    color:#010105;
+  font-size: 16px;
+  color: #010105;
 }
+
 
 
 /*page 4 undergrate *//*icons *//*icons *//*icons *//*icons *//*icons *//*icons *//*icons *//*icons *//*icons */
@@ -831,39 +858,38 @@ background-color: #fdfeff;
     }
   }
           
-    /* --- pagina 6--- */  /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- */
-      /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- *//* --- pagina 6--- */  /* --- pagina 6 --- */
-  /* General Styles */
-/* General Styles */
+/* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ 
+/* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ 
+/* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ /* --- staffpage--- */ 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #c3c3bb;
+  background-color: #fcfcfc;
 }
 
 h1, h2 {
   font-family: 'Poppins', sans-serif;
 }
 
-
 /* Sección 1: Imagen a la izquierda, frase a la derecha */
 .image-quote {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh; /* Asegura que ocupe toda la altura de la página */
+  height: 100vh;
+  background-color: #101010;
 }
 
 .image-container {
   width: 50%;
-  height: 100%; /* Imagen toma el 50% de la altura total */
+  height: 100%;
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+  object-fit: cover;
 }
 
 .quote-container {
@@ -875,6 +901,7 @@ h1, h2 {
   font-size: 48px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  color: #f9f9fb;
 }
 
 /* Sección 2: Título "Our Staff" */
@@ -886,7 +913,7 @@ h1, h2 {
 .our-staff-title h1 {
   font-size: 60px;
   color: #030303;
-  background-color: #bbc2c8;
+  background-color: #ffffff;
 }
 
 /* Sección 3: Descripción de "Our Staff" */
@@ -896,7 +923,7 @@ h1, h2 {
   font-size: 18px;
   color: #0a0101;
   line-height: 1.6;
-  background-color: #717579;
+  background-color: #d2d3d3;
 }
 
 /* Sección 4: Lista de los 8 profesores */
@@ -930,14 +957,86 @@ h1, h2 {
 .bio h2 {
   font-size: 22px;
   margin-bottom: 10px;
+  color: #000000;
 }
 
 .bio p {
   font-size: 16px;
-  color: #777;
+  color: #000000;
 }
 
-/* Responsive for mobile */
+/* Estilos para la sección 'join-family' */
+.join-family {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f0f0;
+}
+
+.join-family h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.join-family p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  color: #555;
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos para la sección 'students-professors' */
+.students-professors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.students-professors-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.students-professors-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.students-professors-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.students-professors-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.students-professors-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 1024px) {
+  .staff-members {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .staff-members {
     grid-template-columns: repeat(2, 1fr);
@@ -945,12 +1044,42 @@ h1, h2 {
 
   .image-quote {
     flex-direction: column;
+    height: auto;
+  }
+
+  .image-container,
+  .quote-container {
+    width: 100%;
+    height: auto;
+    font-size: 32px;
   }
 }
 
+@media (max-width: 480px) {
+  .staff-members {
+    grid-template-columns: 1fr;
+  }
 
-/* information page  */  /* information page  */  /* information page  */  /* information page  */  /* information page  */
-    /* information page  */  /* information page  */  /* information page  */  /* information page  */  /* information page  */
+  .quote-container {
+    font-size: 24px;
+    padding: 15px;
+  }
+}
+
+/* Responsive ajustes nuevos */
+@media (max-width: 768px) {
+  .hero-overlay h1,
+  .highlight-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .image-quote-section p {
+    font-size: 1.2rem;
+  }
+}
+
+/* information page  */  /* information page  */  /* information page  */  /* information page  */  /* information page  *//* information page  *//* information page  */
+/* information page  */  /* information page  */  /* information page  */  /* information page  */  /* information page  *//* information page  *//* information page  */
 /* Reset básico */
 * {
   margin: 0;
@@ -1020,3 +1149,183 @@ body {
 }
 
 
+/* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS */
+/* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS *//* EVENTS */body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-events {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-events img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.events-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.events-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #000000;
+  font-size: 100px;
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.event-box {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.event-box:hover {
+  transform: translateY(-5px);
+}
+
+.event-box img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-details h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.event-details p {
+  margin: 5px 0;
+  color: #0d0d0d;
+}
+.memories-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.memories-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.memories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.memory-box {
+  flex: 1 1 calc(25% - 20px); /* 4 columnas */
+  max-width: calc(25% - 20px);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.memory-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.why-activities-section {
+  padding: 40px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.why-activities-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.why-activities-section p {
+  font-size: 1rem;
+  color: #030303;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .memory-box {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .memory-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-box img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .event-details {
+    padding: 20px;
+    text-align: center;
+  }
+}
