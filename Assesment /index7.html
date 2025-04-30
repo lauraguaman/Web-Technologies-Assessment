@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simple Layout</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-      <img src="images/logo.png" alt="Logo" />
+      <img src="images/logo.png" alt="University Logo">
     </div>
-    <div class="home-icon" onclick="goHome()">
-        <img src="images assessment/menu icon 3.png" alt="Home" class="home-icon" onclick="goHome()">
+    <div class="menu-toggle">
+      <img src="images/home-icon.png" alt="Home" class="home-icon" onclick="goHome()">
     </div>
+    <ul class="menu-list">
+      <li><a href="#" onclick="goToPage('courses.html')">Courses</a></li>
+      <li><a href="#" onclick="goToPage('information.html')">Information</a></li>
+      <li><a href="#" onclick="goToPage('study-with-us.html')">Study with Us</a></li>
+      <li><a href="#" onclick="goToPage('staff.html')">Teachers</a></li>
+    </ul>
   </nav>
 
-  <!-- SECTION: Menu List + Image -->
-  <section class="menu-section">
-    <div class="menu-box">
-      <ul>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Information</a></li>
-        <li><a href="#">Study With Us</a></li>
-        <li><a href="#">Teachers</a></li>
-      </ul>
+  <!-- Main Section: Information -->
+  <section class="info-section">
+    <div class="info-box">
+      <h2>Information</h2>
+      <p>Here you can find detailed information about the university, courses, faculty, and everything else you need to know to be part of our community.</p>
     </div>
-    <div class="menu-image">
-      <img src="images/sample-image.jpg" alt="Menu Image" />
+    <div class="image-box">
+      <img src="images/information-image.jpg" alt="University Information">
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
+
 

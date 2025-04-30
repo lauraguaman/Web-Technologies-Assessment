@@ -16,9 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //page 7 information//
 
+// Función para redirigir al inicio
 function goHome() {
-  // Cambia la URL si tu main page se llama diferente
   window.location.href = "index.html";
+}
+
+// Función para redirigir a otras páginas
+function goToPage(page) {
+  window.location.href = page;
 }
 
 
