@@ -29,20 +29,37 @@
              
 <main>
 
-    <!-- Sección principal con imagen -->
-    <section class="hero-section">
-      <img src="images assessment/REVIEWS UAL.webp" alt="Solent Art University" class="hero-image">
-    </section>
-    
+  <section class="home-carousel-section">
+    <div class="home-carousel-container">
+      
+      <!-- Mitad izquierda: carrusel de imágenes -->
+      <div class="home-carousel-images">
+        <img src="images assessment/Mediterranean Artist in Creative Sanctuary.jpeg" alt="Art 1" class="home-carousel-slide active">
+        <img src="images assessment/Vibrant Neon Fashion.jpeg" alt="Art 2" class="home-carousel-slide">
+        <img src="images assessment/Urban Photographer in Focus.jpeg" alt="Art 3" class="home-carousel-slide">
+        <img src="images assessment/Dynamic Motion Blur with Colorful Attire.jpeg" alt="Art 4" class="home-carousel-slide">
   
-
+        <!-- Flechas opcionales -->
+        <button class="home-carousel-prev" onclick="prevSlide()">&#10094;</button>
+        <button class="home-carousel-next" onclick="nextSlide()">&#10095;</button>
+      </div>
+  
+      <!-- Mitad derecha: texto -->
+      <div class="home-carousel-text">
+        <h1>SOLENT ART UNIVERSITY</h1>
+        <p>Where creativity meets excellence – inspiring your artistic journey every step of the way.</p>
+      </div>
+  
+    </div>
+  </section>
+  
     <!-- Nueva sección destacada de Solent Art University -->
     <section class="solent-highlight">
         <div class="highlight-box">
             <h1>
-                <span class="solent">Solent</span>
-                <span class="art">Art</span>
-                <span class="university">University</span>
+                <span class="solent">Why</span>
+                <span class="art">Choose </span>
+                <span class="university">Solent Art?</span>
             </h1>
         </div>
     </section>
@@ -51,13 +68,12 @@
    
     <section class="info-section">
         <div class="info-container">
-            <h2>Why Choose Solen Art?</h2>
-            <p>At Solen Art University, creativity meets innovation. 
-            Explore your talents and build a future in the world of art and design with top-notch resources and inspiring mentors.</p>
+            <h2></h2>
+            <p>Studying at Solent Art University means joining a vibrant community where creativity, innovation, and passion come together. With a strong focus on both undergraduate and postgraduate programs, the university offers a dynamic environment to develop artistic talent and professional skills. Our state-of-the-art facilities, experienced tutors, and industry connections help students thrive in real-world creative industries. Whether you're beginning your journey or advancing your expertise, Solent is the place to grow and succeed.
+            </p>
         </div>
     </section>
-
-  
+   
 
     <!-- Secciones de razones para entrar a Solent Art University -->
 <section class="reason-section">
@@ -101,6 +117,69 @@
         <p class="reason-text">Solent Art University nurtures values of authenticity, inclusion, and artistic commitment. Its practical and human-centered approach has led students to win international awards and lead creative projects worldwide. Here, every student’s success is celebrated as part of a collective journey</p>
       </div>
   </section>
+
+         <!-- 2da sección: 3 Boxes -->
+  <section class="three-boxes">
+    <div class="box"><img src="images assessment/Group Portrait Against Orange Background.jpeg" alt="Art Gallery"></div>
+    <div class="box"><img src="images assessment/Group Portrait with Orange Background.jpeg" alt="Student Workshop"></div>
+    <div class="box"><img src="images assessment/Unity and Strength.jpeg" alt="Campus Life"></div>
+  </section>
+        <!-- mision and vission-->
+
+  <section class="home-vision-mission-box">
+    <h2>Our Vision & Mission</h2>
+    <div class="vision-mission-buttons">
+      <button onclick="showVision()">Vision</button>
+      <button onclick="showMission()">Mission</button>
+    </div>
+    <div id="visionText" class="vision-mission-text" style="display: none;">
+      <p>To be a leading institution of creative excellence, empowering students to shape the future of the arts and culture industry.</p>
+    </div>
+    <div id="missionText" class="vision-mission-text" style="display: none;">
+      <p>To provide high-quality education, inspire innovation, and nurture the creative potential of every student in a diverse and inclusive environment.</p>
+    </div>
+  </section>
+
+        <!-- motivationtext -->
+
+  <section class="home-motivation-text">
+    <h2>Study at Solent Art University</h2>
+    <p>At Solent Art University, we believe in your creative journey. Our programs are designed to inspire, challenge, and prepare you for a fulfilling career in the arts. Join a vibrant community of artists and thinkers, and take your passion to the next level. Your future starts here.</p>
+  </section>
+
+        <!-- images with values-->
+  <section class="home-gallery-boxes">
+    <h2>Our Core Values</h2>
+    <div class="gallery-row">
+      <div class="gallery-box" onclick="showValue(this, 'Respect')">
+        <img src="images assessment/Enthusiastic Mature Student in Classroom.jpeg" alt="Value 1">
+        <div class="value-text">Respect</div>
+      </div>
+      <div class="gallery-box" onclick="showValue(this, 'Creativity')">
+        <img src="images assessment/The Fervent Artist at Work.jpeg" alt="Value 2">
+        <div class="value-text">Creativity</div>
+      </div>
+      <div class="gallery-box" onclick="showValue(this, 'Integrity')">
+        <img src="images assessment/Wheelchair Basketball Athlete in Sporty Tracksuit.jpeg" alt="Value 3">
+        <div class="value-text">Integrity</div>
+      </div>
+    </div>
+    <div class="gallery-row">
+      <div class="gallery-box" onclick="showValue(this, 'Innovation')">
+        <img src="images assessment/Creative Workshop with Drone.jpeg" alt="Value 4">
+        <div class="value-text">Innovation</div>
+      </div>
+      <div class="gallery-box" onclick="showValue(this, 'Collaboration')">
+        <img src="images assessment/Creative Collaboration in Design Studio (1).jpeg" alt="Value 5">
+        <div class="value-text">Collaboration</div>
+      </div>
+      <div class="gallery-box" onclick="showValue(this, 'Excellence')">
+        <img src="images assessment/Nighttime Gridiron Showdown.jpeg" alt="Value 6">
+        <div class="value-text">Excellence</div>
+      </div>
+    </div>
+  </section>
+  
 
   <footer class="footer">
     <div class="footer-row">
