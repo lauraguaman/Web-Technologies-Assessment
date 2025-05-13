@@ -1,29 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>information</title>
-    <link rel="stylesheet" href="style.css">  
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <!--NAVBAR-->
-        <nav class="navbar">
-          <div class="logo">
-            <img src="images assessment/SAU.png" alt="Logo">
-          </div>
-          <ul class="nav-links">
-            <li><a href="home.html">HOME</a></li>
-            <li><a href="courses.html">COURSES</a></li>
-            <li><a href="instructors.html">INSTRUCTORS</a></li>
-            <li><a href="artrate.html">ARTRATE</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a href="information.html">INFORMATION</a></li>
-          </ul>
-        </nav>
-</header>
-    
-</body>
+      <!--NAVBAR-->
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images assessment/SAU.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="courses.html">COURSES</a></li>
+          <li><a href="instructors.html">INSTRUCTORS</a></li>
+          <li><a href="artrate.html">ARTRATE</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="information.html">INFORMATION</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="contact-section">
+      <div class="contact-text">
+        <h2>Get in Touch with Us</h2>
+        <p>
+          In this fun page, you can get in touch with us! Just fill out the form
+          below.
+        </p>
+      </div>
+
+      <div class="contact-image">
+        <img
+          src="images assessment/Joyful Festival Moment.jpeg"
+          alt="Contact Us"
+        />
+      </div>
+    </section>
+
+    <!-- Intro al Quiz -->
+    <section class="intro-quiz">
+      <h2>Let’s Play Before You Decide</h2>
+      <p>
+        Before you send us your details, take a moment to enjoy this short
+        quiz.<br />
+        It’s a fun way to see if you’re ready to join our creative community.<br />
+        No pressure—just a quick and friendly challenge!
+      </p>
+    </section>
+    <!-- quiz section -->
+    <section class="quiz-section">
+      <h2 class="section-title">Quick Quiz: Are You Ready for Solent Art?</h2>
+      <form id="quiz-form">
+        <div class="quiz-question">
+          <p>1. What is the main color in Solent Art's logo?</p>
+          <label><input type="radio" name="q1" value="red" /> Red</label><br />
+          <label><input type="radio" name="q1" value="blue" /> Blue</label
+          ><br />
+          <label><input type="radio" name="q1" value="green" /> Green</label>
+        </div>
+
+        <div class="quiz-question">
+          <p>2. What tool is often used for digital design?</p>
+          <label
+            ><input type="radio" name="q2" value="brush" /> Paintbrush</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="photoshop" /> Photoshop</label
+          ><br />
+          <label><input type="radio" name="q2" value="pen" /> Pen</label>
+        </div>
+
+        <div class="quiz-question">
+          <p>3. What is creativity?</p>
+          <label
+            ><input type="radio" name="q3" value="following" /> Following
+            rules</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="copying" /> Copying
+            ideas</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="expressing" /> Expressing
+            yourself</label
+          >
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Submit Answers</button>
+      </form>
+      <!-- Result Message -->
+      <p id="quiz-result" class="hidden"></p>
+      <div id="quizThankYou" class="hidden">
+        Thanks for completing the quiz!
+      </div>
+    </section>
+
+    <!-- Motivación para el formulario -->
+    <section class="encourage-form">
+      <h2>Ready to Join Us?</h2>
+      <p>
+        You've already explored, played, and discovered more about Solent
+        Art.<br />
+        Now it’s time to take the next step toward your creative journey.<br />
+        Fill out the form and we’ll be happy to guide you in the process.<br />
+        Don’t wait—your future in art begins today!
+      </p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="form-section">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="firstname" placeholder="First Name" required />
+        <input type="text" name="lastname" placeholder="Last Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="formThankYou" class="thank-you-message hidden">
+        Thank you for your time. We’ll get in touch with you very soon.
+      </div>
+    </section>
+
+    <!-- SCRIPT -->
+    <script>
+      // Función para evaluar el quiz
+      function checkQuiz() {
+        let score = 0;
+        const correctAnswers = {
+          q1: "red",
+          q2: "photoshop",
+          q3: "expressing",
+        };
+
+        // Comprobamos las respuestas del quiz
+        for (let q in correctAnswers) {
+          const selected = document.querySelector(`input[name="${q}"]:checked`);
+          if (selected && selected.value === correctAnswers[q]) {
+            score++;
+          }
+        }
+
+        // Oculta el formulario del quiz
+        document.getElementById("quiz-form").style.display = "none";
+
+        // Muestra el resultado
+        const result = document.getElementById("quiz-result");
+        result.innerHTML = `Good job! Your score is ${score}/3<br><br>Thanks for playing! We hope to see you at Solent Art!`;
+        result.classList.remove("hidden");
+      }
+
+      // Mostrar mensaje tras enviar el formulario
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // Evita que recargue la página
+
+          // Oculta el formulario
+          form.style.display = "none";
+
+          // Muestra el mensaje de agradecimiento
+          document.getElementById("formThankYou").classList.remove("hidden");
+        });
+      });
+    </script>
+
+    <script src="index.js"></script>
+  </body>
 </html>
