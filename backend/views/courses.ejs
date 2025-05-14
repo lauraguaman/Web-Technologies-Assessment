@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Courses</title>
+  </head>
+  <body>
+    <h1>Undergraduate Courses</h1>
+    <% courses.forEach(course => { %> <% if (course.level === 'undergraduate') {
+    %>
+    <div>
+      <h3><%= course.name %></h3>
+      <p><%= course.description %></p>
+      <p><strong>Instructor:</strong> <%= course.instructor %></p>
+      <p><strong>Duration:</strong> <%= course.duration %></p>
+      <img src="<%= course.image %>" width="200px" />
+      <hr />
+    </div>
+    <% } %> <% }) %>
+
+    <h1>Postgraduate Courses</h1>
+    <% courses.forEach(course => { %> <% if (course.level === 'postgraduate') {
+    %>
+    <div>
+      <h3><%= course.name %></h3>
+      <p><%= course.description %></p>
+      <p><strong>Instructor:</strong> <%= course.instructor %></p>
+      <p><strong>Duration:</strong> <%= course.duration %></p>
+      <img src="<%= course.image %>" width="200px" />
+      <hr />
+    </div>
+    <% } %> <% }) %>
+  </body>
+</html>

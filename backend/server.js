@@ -1,54 +1,21 @@
 const express = require("express");
-const cors = require("cors");
 const path = require("path");
 
-/**
- * Config
- */
+const app = express();
 const port = 3000;
 
-/**
- * App
- */
-const app = express();
+// Configurar EJS como motor de plantillas
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
-// Allow different websites to connect
-app.use(
-  cors({
-    origin: "*",
-  })
-);
-
-/**
- * Public
- */
+// Servir archivos estáticos como CSS, JS, imágenes, etc.
 app.use(express.static(path.join(__dirname, "public")));
 
-/**
- * Data
- */
-const coursesData = [
-  {
-    name: "Undergraduate",
-    description: "Discover our range...",
-    url: "/",
-  },
-  {
-    name: " Postgraduate",
-    description: "Advance your carrer with...",
-    url: "/",
-  },
-];
+// Rutas de páginas (views)
+const pagesRoutes = require("./routes/pages");
+app.use("/", pagesRoutes);
 
-/**
- * Routes
- */
-
-app.get("/", (req, res) => res.json({ message: "Hi!" }));
-
-app.get("/courses", (req, res) => res.json(coursesData));
-
-/**
- * Server
- */
-app.listen(port, () => console.log("Listening on port:" + port));
+// Iniciar el servidor
+app.listen(port, () => {
+  console.log(`✅ Server running at http://localhost:${port}`);
+});
