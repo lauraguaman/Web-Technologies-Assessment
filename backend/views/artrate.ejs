@@ -4,26 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>information</title>
-    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="/style.css">  
 </head>
 <body>
-    <header>
-        <!--NAVBAR-->
-        <nav class="navbar">
-          <div class="logo">
-            <img src="images assessment/SAU.png" alt="Logo">
-          </div>
-          <ul class="nav-links">
-            <li><a href="home.html">HOME</a></li>
-            <li><a href="courses.html">COURSES</a></li>
-            <li><a href="instructors.html">INSTRUCTORS</a></li>
-            <li><a href="artrate.html">ARTRATE</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a href="information.html">INFORMATION</a></li>
-          </ul>
-        </nav>
-</header>
+  
+  <%- include('partials/header') %>
 
 <!-- Hero Section con imagen horizontal -->
 <section class="hero-artrate">
@@ -174,48 +159,7 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="footer-row">
-
-    <div class="footer-column">
-      <h3>Information</h3>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Campus Map</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h3>Corporate</h3>
-      <ul>
-        <li><a href="#">Governance</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Cookie Policy</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h3>Financial</h3>
-      <ul>
-        <li><a href="#">Payment Portal</a></li>
-        <li><a href="#">Scholarships</a></li>
-        <li><a href="#">Financial Aid</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <div class="social-icons">
-      <a href="#"><img src="images assessment/facebook logo.png" alt="Facebook logo"></a>
-      <a href="#"><img src="images assessment/twitter logo.png" alt="Twitter logo"></a>
-      <a href="#"><img src="images assessment/instagram logo.png" alt="Instagram logo"></a>
-    </div>
-    <p>&copy; 2025 Solent Art University. All rights reserved.</p>
-  </div>
-</footer>
-
+<%- include('partials/footer') %>
 <script src="index.js"></script>
 </body>
 </html>
