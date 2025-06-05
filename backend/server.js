@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import informationRoutes from "./routes/information.js"; // ⬅️ Importación aquí
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,6 +18,8 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // Routes
+app.use("/information", informationRoutes); // ⬅️ Aquí va la ruta dinámica
+
 app.get("/", (req, res) => {
   res.render("home", { title: "Home - Solent Art" });
 });
@@ -39,10 +42,6 @@ app.get("/faq", (req, res) => {
 
 app.get("/events", (req, res) => {
   res.render("events", { title: "Events - Solent Art" });
-});
-
-app.get("/information", (req, res) => {
-  res.render("information", { title: "Information - Solent Art" });
 });
 
 // 404 route

@@ -2290,6 +2290,16 @@ form#contactForm button:hover {
   background-color: #005fa3;
 }
 
+form#contactForm textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  resize: vertical; /* permite agrandar el campo solo en altura */
+  min-height: 120px; /* tamaño visual coherente */
+}
+
 #thankYou {
   text-align: center;
   margin-top: 20px;
