@@ -33,3 +33,14 @@ CREATE TABLE IF NOT EXISTS events (
   course_category TEXT,
   description TEXT
 );
+-- Tabla de forms
+CREATE TABLE IF NOT EXISTS contacts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  firstname TEXT NOT NULL,
+  lastname TEXT NOT NULL,
+  email TEXT NOT NULL,
+  subject TEXT NOT NULL,
+  message TEXT NOT NULL,
+  date_submitted DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

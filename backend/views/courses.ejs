@@ -8,18 +8,16 @@
   </head>
   <body>
     <%- include('partials/header') %>
-
-   <!-- 1. Banner de cursos con imagen HTML -->
-<section class="banner-courses">
-  <img src="images assessment/Inspired Photographers Workstation.jpeg" alt="Banner Courses Image" class="banner-img">
-  <div class="banner-text">
-    <h1>Solent Art</h1>
-    <p>Empowering your vision, crafting your journey.</p>
-  </div>
-</section>
-
+    <!-- 1 courses image -->
+    <section class="main-image-only">
+      <img src="images assessment/Inspired Photographers Workstation.jpeg" alt="Courses Image" />
+    </section>
+    <!-- courses title -->
+    <section class="courses-title">
+      <h2>Courses</h2>
+    </section>
   
-    <!-- 2. Navegación entre cursos -->
+    <!-- 3. Navegación entre cursos -->
     <section class="courses-navigation">
       <div class="course-box-nav">
         <a href="#undergraduated">Undergraduated</a>
@@ -47,74 +45,70 @@
         </div>
       </div>
     </section>
-  
     <!-- 5. Lista de cursos undergraduated -->
-       <div class="undergraduated-courses">
-        <div class="course-card">
-          <img src="images assessment/Professional Graphic Designer at Work.jpeg" alt="Graphic Design">
-          <div class="course-info">
-            <h3>BA Graphic Design</h3>
-            <p>Explore visual storytelling and branding through design fundamentals.</p>
-            <p><strong>Instructor:</strong> Emily Stone</p>
-            <p><strong>Duration:</strong> 3 years</p>
-          </div>
-        </div>
-      
-        <div class="course-card">
-          <img src="images assessment/Artist in Creative Studio.jpeg" alt="Fine Art">
-          <div class="course-info">
-            <h3>BA Fine Art</h3>
-            <p>Develop your artistic voice through painting, sculpture and mixed media.</p>
-            <p><strong>Instructor:</strong> Daniel Hart</p>
-            <p><strong>Duration:</strong> 3 years</p>
-          </div>
-        </div>
-      
-        <div class="course-card">
-          <img src="images assessment/Vibrant Neon Fashion.jpeg" alt="Fashion">
-          <div class="course-info">
-            <h3>BA Fashion Design</h3>
-            <p>Innovate in the world of wearable art, from concept to catwalk.</p>
-            <p><strong>Instructor:</strong> Sophia Li</p>
-            <p><strong>Duration:</strong> 3 years</p>
-          </div>
-        </div>
-      
-        <div class="course-card">
-          <img src="images assessment/Urban Photographer in Focus.jpeg" alt="Photography">
-          <div class="course-info">
-            <h3>BA Photography</h3>
-            <p>Master the art of image-making across digital and traditional formats.</p>
-            <p><strong>Instructor:</strong> Alex Rivera</p>
-            <p><strong>Duration:</strong> 3 years</p>
-          </div>
-        </div>
-      
-        <div class="course-card">
-          <img src="images assessment/illustration .jpeg" alt="Illustration">
-          <div class="course-info">
-            <h3>BA Illustration</h3>
-            <p>Bring ideas to life through creative drawing and visual storytelling.</p>
-            <p><strong>Instructor:</strong> Mia Taylor</p>
-            <p><strong>Duration:</strong> 3 years</p>
-          </div>
-        </div>
-      
-        <div class="course-card">
-          <img src="images assessment/Graceful Motion.jpeg" alt="Animation">
-          <div class="course-info">
-            <h3>BA Animation</h3>
-            <p>Learn character design, 2D/3D animation, and visual effects techniques.</p>
-            <p><strong>Instructor:</strong> Tom Walker</p>
-            <p><strong>Duration:</strong> 3 years</p>
-          </div>
+    <div class="undergraduated-courses">
+      <div class="course-card">
+        <img src="images assessment/Professional Graphic Designer at Work.jpeg" alt="Graphic Design">
+        <div class="course-info">
+          <h3>BA Graphic Design</h3>
+          <p>This course focuses on branding, digital design, and layout principles to communicate ideas visually across media.</p>
+          <p><strong>Instructor:</strong> Emily Stone</p>
+          <p><strong>Duration:</strong> 3 years</p>
+          <a href="/information" class="info-button">Information</a>
         </div>
       </div>
+      <div class="course-card">
+        <img src="images assessment/Artist in Creative Studio.jpeg" alt="Fine Art">
+        <div class="course-info">
+          <h3>BA Fine Art</h3>
+          <p>Explore creative expression through painting, sculpture, and mixed media with a strong conceptual foundation.</p>
+          <p><strong>Instructor:</strong> Daniel Hart</p>
+          <p><strong>Duration:</strong> 3 years</p>
+          <a href="/information" class="info-button">Information</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="images assessment/Vibrant Neon Fashion.jpeg" alt="Fashion">
+        <div class="course-info">
+          <h3>BA Fashion Design</h3>
+          <p>Design garments from concept to catwalk using color theory, textiles, and industry-standard techniques.</p>
+          <p><strong>Instructor:</strong> Sophia Li</p>
+          <p><strong>Duration:</strong> 3 years</p>
+          <a href="/information" class="info-button">Information</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="images assessment/Urban Photographer in Focus.jpeg" alt="Photography">
+        <div class="course-info">
+          <h3>BA Photography</h3>
+          <p>Master digital and film photography while developing a personal style and understanding visual storytelling.</p>
+          <p><strong>Instructor:</strong> Alex Rivera</p>
+          <p><strong>Duration:</strong> 3 years</p>
+          <a href="/information" class="info-button">Information</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="images assessment/illustration .jpeg" alt="Illustration">
+        <div class="course-info">
+          <h3>BA Illustration</h3>
+          <p>Create impactful illustrations for books, ads, and games through drawing, narrative, and composition skills.</p>
+          <p><strong>Instructor:</strong> Mia Taylor</p>
+          <p><strong>Duration:</strong> 3 years</p>
+          <a href="/information" class="info-button">Information</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="images assessment/Graceful Motion.jpeg" alt="Animation">
+        <div class="course-info">
+          <h3>BA Animation</h3>
+          <p>Learn 2D and 3D animation, storyboarding, and character design for film, games, and media industries.</p>
+          <p><strong>Instructor:</strong> Tom Walker</p>
+          <p><strong>Duration:</strong> 3 years</p>
+          <a href="/information" class="info-button">Information</a>
+        </div>
+      </div>
+    </div>
       
-      <!-- Repite esta estructura para 6 cursos -->
-      <!-- Puedes copiar y editar los siguientes 5 según lo necesites -->
-    </section>
-  
     <!-- 6. Sección postgraduated -->
     <section id="postgraduated" class="section-postgraduated">
       <div class="postgrad-content">
@@ -137,6 +131,7 @@
           <p>Advance your impact through design thinking and innovation management.</p>
           <p><strong>Instructor:</strong> Dr. Olivia Green</p>
           <p><strong>Duration:</strong> 1 year</p>
+          <a href="/information" class="info-button">Information</a>
         </div>
       </div>
     
@@ -147,6 +142,7 @@
           <p>Deepen your artistic practice through research-led creative exploration.</p>
           <p><strong>Instructor:</strong> Prof. Henry Cole</p>
           <p><strong>Duration:</strong> 1 year</p>
+          <a href="/information" class="info-button">Information</a>
         </div>
       </div>
     
@@ -157,6 +153,7 @@
           <p>Lead the future of fashion with a focus on sustainability and tech.</p>
           <p><strong>Instructor:</strong> Amanda Rossi</p>
           <p><strong>Duration:</strong> 1 year</p>
+          <a href="/information" class="info-button">Information</a>
         </div>
       </div>
     
@@ -167,6 +164,7 @@
           <p>Enhance your messaging through advanced graphic and motion design.</p>
           <p><strong>Instructor:</strong> Liam Patel</p>
           <p><strong>Duration:</strong> 1 year</p>
+          <a href="/information" class="info-button">Information</a>
         </div>
       </div>
     
@@ -177,6 +175,7 @@
           <p>Master storytelling for games, film, and interactive narratives.</p>
           <p><strong>Instructor:</strong> Claire Bennett</p>
           <p><strong>Duration:</strong> 1 year</p>
+          <a href="/information" class="info-button">Information</a>
         </div>
       </div>
     
@@ -187,6 +186,7 @@
           <p>Specialize in high-level video production, editing, and media strategy.</p>
           <p><strong>Instructor:</strong> Jake Foster</p>
           <p><strong>Duration:</strong> 1 year</p>
+          <a href="/information" class="info-button">Information</a>
         </div>
       </div>
     </div>

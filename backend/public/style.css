@@ -356,6 +356,7 @@ body {
 }
 
 /*imagenes con value  */
+/* Imagenes con value */
 
 .home-gallery-boxes {
   padding: 60px 20px;
@@ -392,7 +393,8 @@ body {
   transform: scale(1.05);
 }
 
-.value-text {
+/* Este es el texto que aparece al pasar el mouse */
+.overlay-text {
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -403,9 +405,11 @@ body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   display: none;
+  border-radius: 0 0 10px 10px;
 }
 
-.gallery-box.active .value-text {
+/* Se activa cuando se pasa el mouse */
+.overlay-text.visible {
   display: block;
 }
 
@@ -514,41 +518,28 @@ body {
   background-color: #fff;
 }
 
-/* 1. Banner de Cursos */
-.banner-courses {
-  position: relative;
+/* 1. image*/
+.main-image-only img {
   width: 100%;
-  height: 60vh;
-  overflow: hidden;
+  max-width: 1000px;
+  height: 700px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
-
-.banner-courses .banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5; /* Imagen más transparente */
-}
-
-.banner-courses .banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* 2. course title*/
+.courses-title {
   text-align: center;
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 20px 30px;
-  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-color: #000000;
 }
 
-.banner-courses h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.banner-courses p {
-  font-size: 1.2rem;
-  font-style: italic;
+.courses-title h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #f8f8f8;
 }
 
 /* 2. Navegación entre cursos */
@@ -592,7 +583,7 @@ body {
 }
 
 .courses-message p {
-  font-size: 1rem;
+  font-size: 24px;
   line-height: 1.6;
 }
 
@@ -602,7 +593,8 @@ body {
   flex-wrap: wrap;
   align-items: center;
   padding: 40px 20px;
-  background-color: #f8f8f8;
+  background-color: #121212;
+  color: white;
 }
 
 .undergrad-content {
@@ -615,6 +607,7 @@ body {
 
 .undergrad-text {
   flex: 1;
+  font-size: 24px;
 }
 
 .undergrad-img {
@@ -636,7 +629,7 @@ body {
 
 .course-card {
   display: flex;
-  background-color: #eee;
+  background-color: #efefef;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -651,10 +644,12 @@ body {
 .course-info {
   padding: 20px;
   flex: 1;
+  font-size: 24px;
 }
 
 .course-info h3 {
   margin-top: 0;
+  font-size: 26px;
 }
 
 /* 6. Sección Postgraduated */
@@ -663,7 +658,8 @@ body {
   flex-wrap: wrap;
   align-items: center;
   padding: 40px 20px;
-  background-color: #f0f0f0;
+  background-color: #070707;
+  color: white;
 }
 
 .postgrad-content {
@@ -672,6 +668,7 @@ body {
   align-items: center;
   gap: 30px;
   width: 100%;
+  font-size: 24px;
 }
 
 .postgrad-img {
@@ -712,30 +709,52 @@ body {
   padding: 20px;
   flex: 1;
 }
+/* information button*/
+.info-button {
+  background-color: #c9cdd1;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 12px;
+  min-width: 120px;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+.course-card > .info-button {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-left: 1px solid #ccc;
+}
 
 .course-card {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: #f5f5f5;
+  align-items: stretch;
+  background-color: #f7f7f7;
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .course-card img {
-  width: 150px;
-  height: 150px;
+  width: 33.33%;
+  height: 200px;
   object-fit: cover;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
 }
 
 .course-info {
   flex: 1;
-  padding: 10px;
-  transition: transform 0.3s ease;
+  padding: 20px;
+  display: 20px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .course-card:hover {
@@ -1134,35 +1153,52 @@ h2 {
 }
 
 /* Sección 1: Imagen a la izquierda, frase a la derecha */
-.image-quote {
+.hero-split-layout {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  height: 100vh;
-  background-color: #101010;
+  justify-content: center;
+  padding: 60px 40px;
+  background-color: #f4f4f4;
+  gap: 40px;
 }
 
-.image-container {
-  width: 50%;
-  height: 100%;
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.quote-container {
-  width: 50%;
-  padding: 20px;
+.hero-image-container {
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 48px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  color: #f9f9fb;
+}
+
+.hero-split-image {
+  width: 700px;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.hero-text-container {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+}
+
+.hero-quote {
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
 }
 
 /* Sección 2: Título "Our Staff" */
@@ -1172,19 +1208,19 @@ h2 {
 }
 
 .our-staff-title h1 {
-  font-size: 60px;
-  color: #030303;
-  background-color: #ffffff;
+  font-size: 80px;
+  color: #fffbfb;
+  background-color: #000000;
 }
 
 /* Sección 3: Descripción de "Our Staff" */
 .our-staff-description {
   padding: 20px;
   text-align: center;
-  font-size: 18px;
+  font-size: 24px;
   color: #0a0101;
   line-height: 1.6;
-  background-color: #d2d3d3;
+  background-color: #edefef;
 }
 
 /* Sección 4: Lista de los 8 profesores */
@@ -1225,6 +1261,174 @@ h2 {
   font-size: 16px;
   color: #000000;
 }
+/* */
+.bio .description {
+  display: none;
+  margin-top: 8px;
+}
+
+.staff-member:hover .description {
+  display: block;
+}
+
+/* Mostrar siempre nombre, asignatura y email */
+.bio h2,
+.bio .subject,
+.bio .email-box {
+  display: block;
+  color: #000; /* o blanco si tienes fondo oscuro */
+}
+/*  */
+
+/* Mostrar siempre nombre, asignatura y email */
+.bio h2,
+.bio .subject,
+.bio .email-box {
+  display: block;
+  color: #000;
+}
+
+/* Ocultar descripción hasta hacer hover */
+.bio .description {
+  display: none;
+  margin-top: 8px;
+  color: #333;
+}
+
+/* Mostrar descripción al hacer hover */
+.staff-member:hover .description {
+  display: block;
+}
+
+.staff-member {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.staff-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Muestra todo (descripción + correo) al hacer hover */
+.staff-member:hover .bio {
+  opacity: 1;
+  max-height: 300px;
+  padding-top: 10px;
+}
+
+/* Estilo del correo (dentro de la bio) */
+.staff-member .email-box {
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.staff-member:hover .bio {
+  opacity: 1;
+  max-height: 200px;
+  padding-top: 10px;
+}
+
+.staff-member .description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.staff-member:hover .description {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.email-box {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  display: inline-block;
+}
+
+.join-events-box {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.events-card {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.events-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* values */
+.staff-values {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 30px;
+}
+
+.values-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.value-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.value-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.value-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #222;
+  font-size: 1.4rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.value-box:hover img {
+  opacity: 0;
+}
+
+.value-box:hover .value-text {
+  opacity: 1;
+}
 
 /* Estilos para la sección 'join-family' */
 .join-family {
@@ -1242,8 +1446,8 @@ h2 {
 
 .join-family p {
   font-family: "Poppins", sans-serif;
-  font-size: 1.2em;
-  color: #555;
+  font-size: 1.6em;
+  color: #252525;
   margin: 0;
   padding: 0;
   max-width: 800px;
@@ -1289,6 +1493,18 @@ h2 {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 20px;
+}
+/* email box  */
+.email-box {
+  background-color: #a3a3a3;
+  color: #f7f7f7;
+  padding: 8px 12px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Responsive para pantallas pequeñas */
@@ -1336,6 +1552,16 @@ h2 {
 
   .image-quote-section p {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-split-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .hero-text-container {
+    text-align: center;
   }
 }
 
@@ -1420,31 +1646,29 @@ body {
 
 .hero-events {
   position: relative;
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background-color: #f4f4f4;
 }
 
 .hero-events img {
-  width: 100%;
-  height: 100%;
+  width: 1200px;
+  height: 700px;
   object-fit: cover;
-  filter: brightness(60%);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
-.hero-text {
+.hero-events .hero-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
   text-align: center;
-  padding: 1rem;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin: 0;
+  color: white;
+  z-index: 2;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .events-section {
@@ -1454,7 +1678,8 @@ body {
 
 .events-section h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
+  font-size: 50px;
   margin-bottom: 30px;
   color: #000000;
   font-size: 100px;
@@ -1497,13 +1722,14 @@ body {
 
 .event-details h3 {
   margin-top: 0;
-  font-size: 1.4rem;
-  color: #333;
+  font-size: 28px;
+  color: #050505;
 }
 
 .event-details p {
   margin: 5px 0;
   color: #0d0d0d;
+  font-size: 34px;
 }
 .memories-section {
   padding: 40px 20px;
@@ -1551,12 +1777,101 @@ body {
 }
 
 .why-activities-section p {
-  font-size: 1rem;
+  font-size: 24px;
   color: #030303;
   line-height: 1.6;
   margin: 0 auto;
   max-width: 800px;
   text-align: justify;
+}
+/* botton registered*/
+.event-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #011020;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-button:hover {
+  background-color: #0055aa;
+}
+
+.event-button:disabled {
+  background-color: #999;
+  cursor: default;
+}
+/* Registered */
+.registered-msg {
+  display: none;
+  background-color: #02080d;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: default;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-top: 10px;
+  display: inline-block;
+  align-self: center;
+}
+/* memory box message description*/
+.memories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.memory-box {
+  position: relative;
+  width: 260px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.memory-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+.memory-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.memory-box:hover img {
+  opacity: 0;
+}
+
+.memory-box:hover .memory-overlay {
+  opacity: 1;
 }
 
 /* Responsive */
@@ -1594,8 +1909,6 @@ body {
 /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/
 /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/ /*faq*/
 /* General styles */
-/* General styles */
-/* RESET BASIC STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -1610,16 +1923,20 @@ body {
 }
 
 /* FAQ Hero Image Section */
-.faq-image {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
+.faq-hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background-color: #f4f4f4;
 }
 
-.faq-hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra la sección sin perder su proporción */
+.faq-hero-image {
+  width: 1000px;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 /* FAQ Title Section */
@@ -1631,17 +1948,20 @@ body {
 
 .faq-title {
   font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 60px;
 }
 
 /* FAQ Intro Section */
 .faq-intro {
   text-align: center;
   padding: 20px;
-  font-size: 1.2rem;
-  color: #555;
+  font-size: 24px;
+  color: #121212;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -1671,26 +1991,68 @@ body {
 }
 
 .faq-question {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #333;
+  color: #090909;
   cursor: pointer;
   margin-bottom: 10px;
+  position: relative;
+  padding-right: 20px;
+}
+
+.faq-question::after {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #0077cc;
+  font-size: 1rem;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+  transform: rotate(180deg);
 }
 
 .faq-answer {
   display: none;
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.6rem;
+  color: #000000;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+.faq-answer.hidden {
+  display: none;
+}
+.faq-answer.active {
+  display: block;
+}
+.faq-question.active .faq-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 
-/* FAQ Toggle (JavaScript controlled) */
-.faq-question.active + .faq-answer {
-  display: block;
+.faq-icon {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333; /* flecha hacia abajo */
+}
+
+.faq-question.active .faq-icon {
+  transform: rotate(180deg); /* flecha hacia arriba */
+}
+
+.faq-question::after {
+  content: none;
 }
 
 /* FAQ Call to Action Section */
-/* CTA Section: Click for more information */
 .faq-cta-section {
   background-color: #f4f4f4;
   padding: 40px 20px;
@@ -1698,7 +2060,7 @@ body {
 }
 
 .cta-message p {
-  font-size: 1rem;
+  font-size: 24px;
   color: #333;
   max-width: 800px;
   margin: 10px auto;
@@ -1732,14 +2094,14 @@ body {
 }
 
 .get-in-touch-title {
-  font-size: 1.5rem;
+  font-size: 28px;
   font-weight: bold;
   color: #222;
   margin-bottom: 15px;
 }
 
 .get-in-touch-text {
-  font-size: 1rem;
+  font-size: 26px;
   color: #555;
   max-width: 700px;
   margin: 0 auto;
@@ -1765,11 +2127,12 @@ body {
   font-weight: bold;
   display: block;
   margin-bottom: 8px;
+  font-size: 26px;
 }
 
 .faq-contact-box p {
-  font-size: 1rem;
-  color: #555;
+  font-size: 24px;
+  color: #0e0e0e;
 }
 
 /* Responsive Styles */
@@ -1802,6 +2165,12 @@ body {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 768px) {
+  .faq-hero-image {
+    width: 90%;
+    height: auto;
+  }
+}
 
 /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */
 /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */ /*Artrate */
@@ -1817,42 +2186,46 @@ body {
 }
 .hero-artrate {
   position: relative;
-  width: 100%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background-color: #f4f4f4;
 }
 
 .hero-artrate img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: brightness(60%); /* oscurece la imagen para que el texto resalte */
+  width: 1000px;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .hero-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  padding: 0 20px;
+  z-index: 2;
 }
 
 .hero-content h1 {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 .hero-content p {
-  font-size: 22px;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Sección de galería de imágenes */
 .image-gallery {
   padding: 40px 20px;
   text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
 }
 
 .image-gallery hr {
@@ -1892,6 +2265,8 @@ body {
 .main-title {
   text-align: center;
   padding: 30px 10px;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
 }
 
 .main-title h1 {
@@ -1918,7 +2293,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.6;
 }
 
@@ -1957,16 +2332,17 @@ body {
   padding: 20px;
   text-align: center;
   flex: 1;
+  font-size: 28px;
 }
 
 .review-text h3 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 5px;
   color: #222;
 }
 
 .review-text p {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
@@ -2027,6 +2403,30 @@ body {
   margin: 5px 0;
   font-size: 16px;
 }
+.attend-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #050505;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.attend-button:hover {
+  background-color: #333;
+}
+
+.attend-confirmation {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #020645;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -2055,14 +2455,13 @@ body {
 /* information page */ /* information page */ /* information page */ /* information page */
 /* information page */ /* information page */ /* information page */ /* information page */
 
-/* Reset básico */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Fuente base */
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
@@ -2070,14 +2469,16 @@ body {
   color: #333;
 }
 
-/* --- Primera sección: texto + imagen --- */
+/* Imagen + texto superior */
 .contact-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 60px;
+  padding: 60px 80px;
   gap: 40px;
   flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .contact-text {
@@ -2086,203 +2487,244 @@ body {
 }
 
 .contact-text h2 {
-  font-size: 2.8rem;
+  font-size: 56px;
   font-weight: bold;
   margin-bottom: 15px;
   color: #0d0d0d;
 }
 
 .contact-text p {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 22px;
+  color: #1e1e1e;
 }
 
 .contact-image {
   flex: 1;
-  max-width: 500px;
+  max-width: 1200px;
 }
 
 .contact-image img {
   width: 100%;
-  height: auto;
+  height: 800px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-/* --- Segunda sección: subtítulo --- */
-.subheading {
-  text-align: center;
-  padding: 40px 20px 10px;
-}
-
-.subheading h3 {
-  font-size: 1.6rem;
-  color: #222;
-  margin-bottom: 10px;
-}
-
-.subheading p {
-  font-size: 1rem;
-  color: #666;
-}
-/* Sección intro al quiz */
+/* Intro naranja */
 .intro-quiz {
-  background-color: #fff8f0;
+  background-color: #fff2e0;
   padding: 50px 30px;
   text-align: center;
   margin: 40px auto;
-  max-width: 800px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  font-size: 28px;
 }
 
 .intro-quiz h2 {
-  font-size: 2rem;
+  font-size: 28px;
   color: #cc5500;
   margin-bottom: 15px;
 }
 
 .intro-quiz p {
-  font-size: 1.1rem;
+  font-size: 26px;
   color: #444;
   line-height: 1.6;
 }
 
-/* Sección motivadora para el formulario */
-.encourage-form {
-  background-color: #e6f7ff;
-  padding: 50px 30px;
+/* Quiz nuevo */
+
+.quiz-box-section h2 {
   text-align: center;
-  margin: 40px auto;
-  max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #1a1a1a;
 }
 
-.encourage-form h2 {
-  font-size: 2rem;
-  color: #0077cc;
-  margin-bottom: 15px;
+.quiz-q {
+  margin-bottom: 25px;
+  font-size: 28px;
 }
 
-.encourage-form p {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* --- Tercera sección: quiz --- */
-.quiz-section {
-  background-color: #f7f7f7;
-  padding: 40px 30px;
-  margin: 40px auto;
-  max-width: 700px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.quiz-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.quiz-question {
-  margin-bottom: 20px;
-}
-
-.quiz-question p {
+.quiz-q p {
   font-weight: 500;
   margin-bottom: 10px;
+  font-size: 28px;
 }
 
-.quiz-question label {
+.quiz-q label {
   display: block;
   margin-bottom: 8px;
-  font-size: 1rem;
+  font-size: 26px;
 }
 
-.quiz-section button {
-  margin-top: 10px;
+.quiz-box-section button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
   padding: 12px 20px;
-  background-color: #0077cc;
+  background-color: #02416e;
   color: white;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 26px;
 }
 
-.quiz-section button:hover {
+.quiz-box-section button:hover {
   background-color: #005fa3;
 }
 
-.quiz-result {
-  margin-top: 20px;
+#quizSimpleResult {
+  font-size: 28px;
   font-weight: bold;
-  color: #28a745;
   text-align: center;
-}
-.thank-you-message {
   margin-top: 20px;
-  font-size: 1.2rem;
-  color: green;
-  font-weight: bold;
+  color: #0a0808;
 }
 
-.hidden {
-  display: none;
-}
-
-/* --- Cuarta sección: texto motivador --- */
-.reminder-text {
+/* Ready to Join Us */
+.encourage-form {
+  background-color: #e6f7ff;
+  padding: 50px 30px;
   text-align: center;
-  margin-top: 50px;
-  font-size: 4rem;
-  font-weight: 500;
-  color: #444;
-}
-
-/* --- Quinta sección: formulario --- */
-.form-section {
-  background-color: #f0f0f0;
-  padding: 40px 30px;
-  border-radius: 16px;
-  max-width: 600px;
   margin: 40px auto;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
 }
 
-.form-section h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 1.8rem;
+.encourage-form h2 {
+  font-size: 26px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.encourage-form p {
+  font-size: 23px;
   color: #333;
+  line-height: 1.6;
 }
 
-form#contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* === QUICK QUIZ DISEÑO === */
+.quiz-box-section {
+  background-color: #f7f7f7;
+  padding: 50px 30px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
 }
 
-form#contactForm input[type="text"],
-form#contactForm input[type="email"] {
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+.quiz-box-wrapper h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #222;
 }
 
-form#contactForm button {
-  padding: 14px;
+.quiz-q {
+  margin-bottom: 25px;
+}
+
+.quiz-q p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.quiz-q label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+#submitQuiz {
+  display: block;
+  margin: 25px auto 10px;
+  padding: 14px 28px;
   background-color: #0077cc;
   color: white;
   border: none;
   border-radius: 10px;
   font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitQuiz:hover {
+  background-color: #005fa3;
+}
+
+#quizResult {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #0a0808;
+}
+
+/* === FORMULARIO DISEÑO === */
+.form-section {
+  background-color: #f0f0f0;
+  padding: 50px 30px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+}
+
+.form-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+form#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+form#contactForm label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #101010;
+  font-size: 26px;
+}
+
+form#contactForm input[type="text"],
+form#contactForm input[type="email"],
+form#contactForm textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #0e0e0e;
+  font-size: 28px;
+  width: 100%;
+}
+
+form#contactForm textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: "Poppins", sans-serif;
+}
+
+form#contactForm button {
+  padding: 14px 28px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 26px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 
@@ -2290,50 +2732,34 @@ form#contactForm button:hover {
   background-color: #005fa3;
 }
 
-form#contactForm textarea {
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-  resize: vertical; /* permite agrandar el campo solo en altura */
-  min-height: 120px; /* tamaño visual coherente */
-}
-
-#thankYou {
+/* Mensaje de confirmación */
+#formThankYou {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
+  font-size: 28px;
   font-weight: bold;
   color: green;
-  font-size: 1.1rem;
   display: none;
 }
 
-.thank-you-message {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: green;
+/* Responsive */
+@media (max-width: 768px) {
+  .quiz-box-section,
+  .form-section {
+    padding: 30px 20px;
+  }
 }
 
-.hidden {
-  display: none;
-}
-
-/* Responsive: Ajuste para pantallas pequeñas */
+/* Responsive ajustes */
 @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
     padding: 30px 20px;
   }
 
-  .contact-text,
-  .contact-image {
-    max-width: 100%;
-  }
-
-  .form-section,
-  .quiz-section {
-    padding: 20px;
+  .intro-quiz,
+  .quiz-box-section,
+  .encourage-form {
+    padding: 25px;
   }
 }

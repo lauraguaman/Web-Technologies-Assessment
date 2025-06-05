@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>information</title>
+    <title>FAQ</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <%- include('partials/header') %>
-    <!--body page-->
+
     <!-- FAQ Hero Image Section -->
-    <section class="faq-image">
+    <section class="faq-hero-wrapper">
       <img
-        src="images assessment/Contemplative Duo with Laptops.jpeg"
+        src="images assessment/Contemplative Audience Member with Headphones.jpeg"
         alt="FAQ Hero Image"
-        class="faq-hero-img"
+        class="faq-hero-image"
       />
     </section>
 
@@ -34,72 +34,111 @@
     <!-- FAQ Questions Section -->
     <section class="faq-list">
       <div class="faq-item">
-        <h3 class="faq-question">What courses does Solent Art offer?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          What courses does Solent Art offer?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           We offer a wide range of art and design courses including fine art,
           graphic design, photography, and more.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">How can I apply?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          How can I apply?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           You can apply through UCAS or directly via our university website.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">What are the entry requirements?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          What are the entry requirements?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           Entry requirements vary by course. Generally, we require a portfolio
           and relevant academic qualifications.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">Do you offer scholarships?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          Do you offer scholarships?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           Yes, we offer several scholarships for talented students. Visit our
           scholarship page for more details.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">Are there international student programs?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          Are there international student programs?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           Yes, we welcome students from all over the world and offer support
           services for international applicants.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">Is accommodation available?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          Is accommodation available?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           Yes, we provide various housing options close to campus.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">What facilities are available?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          What facilities are available?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           Our campus includes studios, galleries, computer labs, and a library
           dedicated to the arts.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">Can I visit the campus?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          Can I visit the campus?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           Yes, we offer open days and campus tours. Check our website to book
           your visit.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">Are internships available?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          Are internships available?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           Many of our courses include internship opportunities with industry
           partners.
-        </p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3 class="faq-question">How do I contact admissions?</h3>
-        <p class="faq-answer">
+        <div class="faq-question">
+          How do I contact admissions?
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer hidden">
           You can reach out to our admissions team via phone or email listed
           below.
-        </p>
+        </div>
       </div>
     </section>
 
@@ -109,17 +148,18 @@
         <p>
           Thank you for taking the time to explore our FAQ section. We are
           committed to providing clear information and support to all
-          prospective students.If you need further assistance or wish to explore
-          your academic options, we are here to guide you every step of the
-          way.We look forward to welcoming you into our creative and inspiring
-          academic community.
+          prospective students. If you need further assistance or wish to
+          explore your academic options, we are here to guide you every step of
+          the way. We look forward to welcoming you into our creative and
+          inspiring academic community.
         </p>
       </div>
 
       <div class="faq-cta-button">
-        <a href="information.html" class="cta-link">Information</a>
+        <a href="/information" class="cta-link">Information</a>
       </div>
     </section>
+
     <!-- Get in Touch Section -->
     <section class="get-in-touch-section">
       <h2 class="get-in-touch-title">GET IN TOUCH</h2>
@@ -148,6 +188,5 @@
 
     <%- include('partials/footer') %>
     <script src="index.js"></script>
-    <script src="/scripts/courses.js"></script>
   </body>
 </html>
